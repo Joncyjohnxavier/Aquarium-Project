@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Slider Using Only HTML and CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<style>
+    .hero {
+        height: 100vh;
+        background: url('fish.jpg') no-repeat center center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-img-top {
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .card-title {
+        font-size: 1.5rem; 
+        font-weight: bold; 
+    }
+
+    .card-text {
+        font-size: 1.25rem; 
+    }
+
+    @media(max-width:992px) {
+        .hero h1 {
+            color: rgb(209, 61, 197);
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+
+        .btn-lg {
+            padding: 0.75rem 1.5rem;
+            font-size: 1.25rem;
+        }
+    }
+</style>
+<body>
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Website</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#appointment">Buy now</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="text-center">
+        <p class="lead text-white"><b>JO AQUARIUM</b></p>
+        <p class="lead text-white"><b>WELCOME TO OUR AQUARIUM</b></p>
+        <a href="#service" class="btn btn-primary btn-lg">KNOW MORE</a>
+    </div>
+</section>
+
+<section>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="fish1.jpg" class="card-img-top" alt="service 1">
+                <div class="card-body">
+                    <h5 class="card-title">GOLDEN FISHES</h5>
+                    <p class="card-text">EXPLORE OUR COLLECTION</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="fish2.jpg" class="card-img-top" alt="service 2">
+                <div class="card-body">
+                    <h5 class="card-title">GUPPY FISHES</h5>
+                    <p class="card-text">ALWAYS AVAILABLE. EXPLORE OUR COLLECTION</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="fish3.jpg" class="card-img-top" alt="service 3">
+                <div class="card-body">
+                    <h5 class="card-title">SHARK</h5>
+                    <p class="card-text">EXPLORE OUR COLLECTION</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="fish4.jpg" class="card-img-top" alt="service 4">
+                <div class="card-body">
+                    <h5 class="card-title">ANIMAL FISH</h5>
+                    <p class="card-text">ALWAYS AVAILABLE. EXPLORE OUR COLLECTION</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="fish5.jpg" class="card-img-top" alt="service 5">
+                <div class="card-body">
+                    <h5 class="card-title">TANG FISHES</h5>
+                    <p class="card-text">CHECK OUT OUR COLLECTION</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="fish6.jpg" class="card-img-top" alt="service 6">
+                <div class="card-body">
+                    <h5 class="card-title">CLOWNFISH</h5>
+                    <p class="card-text">DISCOVER OUR COLLECTION</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="appointment" class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <h2>Buy Fishes</h2>
+            <p class="lead">Choose a type of fish to buy with your expectations</p>
+            <form id="appointmentForm" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    <div class="invalid-feedback">Please enter your email.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Contact Number</label>
+                    <input type="tel" class="form-control" id="contact" placeholder="Enter your contact number" required>
+                    <div class="invalid-feedback">Please enter your contact number.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
